@@ -1,38 +1,169 @@
+ # 🧠 Activity: Comparing Prompting Techniques
 
+---
 
-# EXP 5: COMPARATIVE ANALYSIS OF DIFFERENT TYPES OF PROMPTING PATTERNS AND EXPLAIN WITH VARIOUS TEST SCENARIOS
+## 📌 Task
+Find the **largest number in a list of numbers**.
 
-# Aim: To test and compare how different pattern models respond to various prompts (broad or unstructured) versus basic prompts (clearer and more refined) across multiple scenarios.  Analyze the quality, accuracy, and depth of the generated responses 
+---
 
-### AI Tools Required: 
+## 🔹 1. Basic Prompt
 
-# Explanation: 
-Define the Two Prompt Types:
+A **basic prompt** is simple but may be unclear or less structured.
 
-Write a basic Prompt: Clear, detailed, and structured prompts that give specific instructions or context to guide the model.
-Based on that pattern type refined the prompt and submit that with AI tool.
-Get the ouput and write the report.
+### Prompt
+```
+Find the largest number in this list: 5, 12, 3, 21, 8.
+```
 
-Prepare Multiple Test Scenarios:
-Select various scenarios such as:
-Generating a creative story.
-Answering a factual question.
-Summarizing an article or concept.
-Providing advice or recommendations.
-Or Any other test scenario
-For each scenario, create both a naïve and a basic prompt. Ensure each pair of prompts targets the same task but with different levels of structure.
-Run Experiments with ChatGPT:
-Input the naïve prompt for each scenario and record the generated response.
-Then input the corresponding basic prompt and capture that response.
-Repeat this process for all selected scenarios to gather a full set of results.
-Evaluate Responses : 
-	Compare how ChatGPT performs when given naïve versus basic prompts and analyze the output based on Quality,Accuracy and Depth. Also analyse does ChatGPT consistently provide better results with basic prompts? Are there scenarios where naïve prompts work equally well?
-Deliverables:
-A table comparing ChatGPT's responses to naïve and basic prompts across all scenarios.
-Analysis of how prompt clarity impacts the quality, accuracy, and depth of ChatGPT’s outputs.
-Summary of findings with insights on how to structure prompts for optimal results when using ChatGPT.
+### Typical Response
+```
+The largest number in the list is 21.
+```
 
+### 🔍 Observation
+- Short answer  
+- No explanation  
+- Correct but limited depth  
 
-# OUTPUT
+---
 
-# RESULT: The prompt for the above said problem executed successfully
+## 🔹 2. Zero-Shot Prompt
+
+**Zero-shot prompting** means **no examples are given**, but the instruction is clearer.
+
+### Prompt
+```
+You are a helpful assistant. Identify the largest number from the following list of numbers: 5, 12, 3, 21, 8. Provide the final answer.
+```
+
+### Response
+```
+The numbers are 5, 12, 3, 21, and 8.
+Among these numbers, 21 is the largest.
+
+Final Answer: 21
+```
+
+### 🔍 Observation
+- Slightly clearer explanation  
+- Still simple reasoning  
+- Works well for straightforward tasks  
+
+---
+
+## 🔹 3. Few-Shot Prompt
+
+**Few-shot prompting** provides examples so the model understands the pattern.
+
+### Prompt
+```
+Find the largest number in the list.
+
+Example 1:
+Input: 3, 7, 2, 9
+Output: The largest number is 9.
+
+Example 2:
+Input: 10, 4, 6, 15
+Output: The largest number is 15.
+
+Now solve this:
+Input: 5, 12, 3, 21, 8
+Output:
+```
+
+### Response
+```
+The largest number is 21.
+```
+
+### 🔍 Observation
+- Model follows pattern from examples  
+- More reliable for complex tasks  
+- Improves accuracy  
+
+---
+
+## 🔹 4. Chain-of-Thought Prompt
+
+**Chain-of-Thought prompting** encourages **step-by-step reasoning**.
+
+### Prompt
+```
+Find the largest number in the list: 5, 12, 3, 21, 8.
+Think step by step and explain your reasoning before giving the final answer.
+```
+
+### Response
+```
+Step 1: The numbers are 5, 12, 3, 21, and 8.
+Step 2: Compare the numbers to find the greatest value.
+Step 3: 21 is greater than 5, 12, 3, and 8.
+
+Final Answer: 21
+```
+
+### 🔍 Observation
+- Clear reasoning  
+- More detailed  
+- Useful for complex problems like math or logic  
+
+---
+
+# 📊 Evaluation of Prompting Techniques
+
+We will evaluate using the **RAA Method (Relevance, Accuracy, Analysis Depth).**
+
+### 🔹 Basic Prompt
+- **Relevance:** Medium  
+- **Accuracy:** High  
+- **Depth:** Low  
+
+### 🔹 Zero-Shot Prompt
+- **Relevance:** High  
+- **Accuracy:** High  
+- **Depth:** Medium  
+
+### 🔹 Few-Shot Prompt
+- **Relevance:** High  
+- **Accuracy:** Very High  
+- **Depth:** Medium  
+
+### 🔹 Chain-of-Thought Prompt
+- **Relevance:** Very High  
+- **Accuracy:** Very High  
+- **Depth:** High  
+
+---
+
+# 🔎 Analysis
+
+### 🔹 Basic Prompt
+- Works for simple tasks  
+- Minimal explanation  
+
+### 🔹 Zero-Shot Prompt
+- Better structured  
+- Clear instruction improves response quality  
+
+### 🔹 Few-Shot Prompt
+- Examples guide the model  
+- Reduces misunderstanding  
+
+### 🔹 Chain-of-Thought Prompt
+- Best for reasoning tasks  
+- Shows step-by-step logic  
+
+---
+
+# 🏁 Conclusion
+
+Different prompting techniques significantly affect AI responses.
+
+- **Basic prompts** produce quick but shallow answers.  
+- **Zero-shot prompts** improve clarity.  
+- **Few-shot prompts** improve accuracy using examples.  
+- **Chain-of-Thought prompts** produce the most detailed and explainable results.
+
+Thus, **Chain-of-Thought prompting generally gives the most comprehensive responses**, especially for reasoning-based tasks.
